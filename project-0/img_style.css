@@ -1,0 +1,17 @@
+#logo-container {
+  position: relative;
+}
+
+#logo-container img {
+  width: 270px;
+  height: auto;
+}
+
+#logo-container span {
+  position: absolute;
+  bottom: 0px;
+  transform: translate(105px, -30px);
+  font-size: 16px;
+  color: #4285F4;
+  font-family: Arial, sans-serif;
+}

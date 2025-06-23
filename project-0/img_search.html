@@ -3,6 +3,7 @@
     <head>
         <title>Google Images Search</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="img_style.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -11,11 +12,13 @@
             <a href="adv_search.html">Advanced Search</a>
         </nav>
         <div id="logo-container">
-            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+            <img alt="logo-google" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+            <span>Images</span>
         </div>
         <div id="form-container">
             <form action="https://www.google.com/search">
             <input type="text" name="q" id="input">
+            <input type="hidden" name="tbm" value="isch">
             <input type="submit" value="Google Search" id="submit">
         </form>
         </div>
