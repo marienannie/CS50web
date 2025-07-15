@@ -16,28 +16,38 @@
         <div id="main-container">
             <h1>Advanced Search</h1>
             <hr>
-            <section>
-                <span>Find pages with...</span>
-                <div id="form-container">
-                    <form action="https://www.google.com/search">
-                        <label for="words">all these words: </label>
-                        <input type="tetx" id="words">
-                        <label>this exact word or phrase: </label>
-                        <input type="text" name="" id="">
-                        <label>any of these words: </label>
-                        <input type="text">
-                        <label>any of these words: </label>
-                        <input type="text" name="" id="">
-                        <label for="">none of these words: </label>
-                        <input type="text" name="" id="">
-                        <label for="">numbers ranging from: </label>
-                        <input type="text" name="" id="">
-                        <label>to</label>
-                        <input type="text" name="" id="">
-                        <input type="button" value="submit">
-                    </form>
-                </div>
-            </section>
+            <div id="form-container">
+                <form action="https://www.google.com/search">
+                    <span>Find pages with...</span>
+                    <span id="note-title">To do this in the seach box.</span>
+
+                    <label for="words">all these words: </label>
+                    <input type="text" id="words" class="input">
+                    <label for="words" class="note">Type the important words: <span>tri-color rat terrier</span></label>
+
+                    <label>this exact word or phrase: </label>
+                    <input type="text" name="" id="" class="input">
+                    <label for="" class="note">Put exact words in quotes <span>"rat terrier"</span></label>
+
+                    <label>any of these words: </label>
+                    <input type="text" class="input">
+                    <label for="" class="note">Type <span>OR</span> between all the words you want <span>miniature OR standard</span></label>
+
+                    <label for="">none of these words: </label>
+                    <input type="text" name="" id="" class="input">
+                    <label for="" class="note">Put a minus sign just before words that you don't want: <span>-rodent -"Jack Russel"</span></label>
+
+                    <label for="">numbers ranging from: </label><br>
+                    <input type="text" name="" id="" class="input-num">
+                    <label id="to">to</label>
+                    <input type="text" name="" id="" class="input-num">
+                    <label for="" class="note">Put two full stps between numbers and add a unit of measurement: <span>10..35 kg, £300..£500, 2010..2011</span></label>
+
+                    <hr>
+
+                    <span>Then narrow your results by...</span>
+                </form>
+            </div>
         </div>
     </body>
 </html>
