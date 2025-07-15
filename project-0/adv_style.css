@@ -70,7 +70,7 @@ hr {
 
 form {
     display: grid;
-    grid-template-columns: 170px 1fr 25px 1fr 1fr;
+    grid-template-columns: 180px 1fr 25px 1fr 1fr;
     gap: 13px;
 
 }
@@ -94,14 +94,11 @@ form hr {
     width: 100%;
 }
 
-.input-num {
-    min-width: 50px;
-}
 
 form > span {
     margin-bottom: 4px;
     display: block;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: lighter;
 }
 
@@ -146,16 +143,6 @@ form hr {
     }
 }
 
-#to {
-    width: 25px;
-    grid-column: 3 / 4;
-    text-align: center;
-}
-
-br {
-    display: none;
-}
-
 @media screen and (max-width: 350px){
     form {
         grid-template-columns: 1fr 25px 1fr;
@@ -164,18 +151,5 @@ br {
     
     form > label {
         grid-column: span 3;
-    }
-
-    .input-num:first-of-type {
-        grid-column: 1;
-    }
-
-    #to {
-        grid-column: 2;
-        justify-self: center;
-    }
-
-    br {
-        display: block;
     }
 }
