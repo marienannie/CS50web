@@ -46,23 +46,30 @@ body{
     }
 }
 
-#submit {
-    display: block;
+#button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.submit {
     background-color: rgb(247, 247, 247);
     border: 1px solid transparent;
     border-bottom: 2px solid transparent;
-    border-radius: 6px;
+    border-radius: 4px;
     padding: 8px 17px;
-    margin: 20px auto;
+    margin: 20px 5PX;
     font-size: 14px;
     color: rgb(82, 82, 82);
+    align-items: center;
 }
 
-#submit:focus {
+.submit:focus {
     outline: 0;
 }
 
-#submit:hover {
+.submit:hover {
     border: 1px solid rgb(204, 204, 204);
     border-bottom: 2px solid rgb(204, 204, 204);
 }
