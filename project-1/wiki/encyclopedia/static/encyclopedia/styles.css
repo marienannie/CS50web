@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    padding: 0;
     background-color: rgb(247, 238, 255);
 }
 
@@ -20,7 +21,8 @@ textarea {
     width: 100%;
     grid-column: span 2;
     border-radius: 8px;
-    bottom: 0;
+    border: 1px solid rgb(223, 208, 238);
+    padding: 3px 8px;
 }
 
 textarea:focus {
@@ -29,7 +31,9 @@ textarea:focus {
 
 .main {
     padding: 15px 25px;
-    height: 100vh;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .search {
@@ -49,7 +53,7 @@ textarea:focus {
 
 .sidebar {
     background-color: rgb(223, 208, 238);
-    height: 96vh;
+    height: 94vh;
     padding: 20px;
     border-radius: 0 20px 20px 0;
     margin: 2vh 0;
@@ -76,11 +80,34 @@ input[name="title"] {
     border-radius: 8px;
     padding: 3px 8px;
     display: inline;
+    border: 1px solid rgb(223, 208, 238);
+}
+
+input[name="title"]:focus {
+    outline: none;
+    
+}
+
+input[name="title"]:focus::placeholder, textarea:focus::placeholder {
+    color: rgba(112, 0, 216, 0.8);
 }
 
 button {
     display: inline;
     border-radius: 8px;
+    border: 1px solid rgb(128, 31, 255);
+    background-color: rgb(152, 73, 255);
+    color: rgb(243, 231, 255);
+}
+
+button:hover {
+    box-shadow: 1px 1px rgb(124, 0, 207);
+}
+
+button:focus {
+    outline: none;
+    transform: translateX(2px);
+    transform: translateY(1px);
 }
 
 
@@ -88,6 +115,7 @@ hr {
     border: none;
     height: 2px;
     background-color: rgb(152, 73, 255);
+    width: 100%;
 }
 
 .main > ul {
@@ -99,4 +127,5 @@ hr {
     grid-template-columns: auto 150px;
     grid-template-rows: auto 1fr;
     gap: 15px;
+    flex-grow: 1;
 }
