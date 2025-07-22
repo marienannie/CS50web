@@ -12,12 +12,17 @@ def add(request):
     return render(request, "encyclopedia/add.html")
 
 def entry(request, title):
-    content = util.get_entry(title)
-    if content is None:
+    raw_markdown = util.get_entry(title)
+    if raw_markdown is None:
         return render(request, "encyclopedia/error.html", {
             "message": f'The "{title}" entry does not exist.'
         })
-    return render(request, "encyclopedia/entry.html"), {
+    
+    lines = raw_markdown.split('\n', 1)
+    content_body = lines[1] if len(lines) > 1 else ''
+
+    html_content = markdown2.markdown(content_body)
+    return render(request, "encyclopedia/entry.html", {
         "title": title,
-        "content": markdown2.markdown(content)
-    }
+        "content": html_content
+    })

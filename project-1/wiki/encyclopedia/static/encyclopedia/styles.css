@@ -64,6 +64,10 @@ textarea:focus {
     color: rgb(124, 0, 207);
 }
 
+.sidebar a:hover {
+    text-decoration: none;
+}
+
 .sidebar > div {
     margin: 6px 8px;
 }
@@ -72,8 +76,13 @@ a {
     color: rgb(40, 40, 40);
 }
 
+a:hover {
+    color: rgb(124, 0, 207);
+    text-decoration: none;
+}
+
 .is_selected {
-    color: rgb(152, 73, 255);
+    color: rgb(124, 0, 207s);
 }
 
 input[name="title"] {
@@ -128,4 +137,9 @@ hr {
     grid-template-rows: auto 1fr;
     gap: 15px;
     flex-grow: 1;
+}
+
+.content-container a {
+    color: rgb(124, 0, 207) !important;
+    text-decoration: none;
 }

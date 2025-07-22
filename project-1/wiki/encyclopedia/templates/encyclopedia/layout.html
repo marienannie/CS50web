@@ -16,10 +16,10 @@
                     <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
                 </form>
                 <div>
-                    <a href="{% url 'index' %}">Home</a>
+                    <a href="{% url 'index' %}" class="{% if request.path == '/' %}is_selected{% endif %}">Home</a>
                 </div>
                 <div>
-                    <a href="{% url 'add' %}">Create New Page</a>
+                    <a href="{% url 'add' %}" class="{% if request.path == '/wiki/add' %}is_selected{% endif %}">Create New Page</a>
                 </div>
                 <div>
                     <a href="">Random Page</a>
