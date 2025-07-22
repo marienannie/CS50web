@@ -1,6 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    background-color: rgb(240, 224, 255);
+    background-color: rgb(247, 238, 255);
 }
 
 code {
@@ -13,21 +17,29 @@ h1 {
 }
 
 textarea {
-    height: 90vh;
-    width: 80%;
+    width: 100%;
+    grid-column: span 2;
+    border-radius: 8px;
+    bottom: 0;
+}
+
+textarea:focus {
+    outline: none;
 }
 
 .main {
-    padding: 10px;
+    padding: 15px 25px;
+    height: 100vh;
 }
 
 .search {
-    border-radius: 15px;
+    border-radius: 8px;
     border: 1px solid rgb(145, 145, 145);
     width: 100%;
     font-size: 15px;
     line-height: 15px;
-    padding: 2px 7px;
+    padding: 3px 8px;
+    margin: 4px 2px;
 }
 
 .search:focus {
@@ -36,12 +48,55 @@ textarea {
 }
 
 .sidebar {
-    background-color: rgb(231, 205, 255);
-    height: 100vh;
+    background-color: rgb(223, 208, 238);
+    height: 96vh;
     padding: 20px;
+    border-radius: 0 20px 20px 0;
+    margin: 2vh 0;
 }
 
 .sidebar h2 {
     margin: 5px;
     color: rgb(124, 0, 207);
+}
+
+.sidebar > div {
+    margin: 6px 8px;
+}
+
+a {
+    color: rgb(40, 40, 40);
+}
+
+.is_selected {
+    color: rgb(152, 73, 255);
+}
+
+input[name="title"] {
+    border-radius: 8px;
+    padding: 3px 8px;
+    display: inline;
+}
+
+button {
+    display: inline;
+    border-radius: 8px;
+}
+
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: rgb(152, 73, 255);
+}
+
+.main > ul {
+    padding: 0 15px;
+}
+
+.main > form {
+    display: grid;
+    grid-template-columns: auto 150px;
+    grid-template-rows: auto 1fr;
+    gap: 15px;
 }
