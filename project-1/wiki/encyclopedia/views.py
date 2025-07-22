@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 import markdown2
 from . import util
+import random
 
 
 def index(request):
@@ -26,3 +27,8 @@ def entry(request, title):
         "title": title,
         "content": html_content
     })
+
+def random_page(request):
+    entries = util.list_entries()
+    random_entry = random.choice(entries)
+    return redirect('entry', title=random_entry)
