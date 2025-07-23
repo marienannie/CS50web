@@ -14,6 +14,16 @@ def add(request):
         title = request.POST["title"]
         content = request.POST["content"]
 
+        all_entries = util.list_entries()
+
+        for entry in all_entries:
+            if entry.lower() == title.lower():
+                return render(request, "encyclopedia/add.html", {
+                    "title_input": title,
+                    "content_input": content,
+                    "error": "An entry with this title already exists."
+                })
+            
         full_content = f"# {title}\n\n{content}"
 
         util.save_entry(title, full_content)

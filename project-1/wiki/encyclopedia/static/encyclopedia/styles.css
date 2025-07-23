@@ -173,3 +173,27 @@ hr {
 h1 > span {
     color:rgb(124, 0, 207);
 }
+
+.input-container > input {
+    width: 100%;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+/* SOLO SI HAY ERROR EN EL INPUT CREATE NEW PAGE */
+
+.input-container.error > span {
+    font-size: 12px;
+    position: absolute;
+    right: 5px;
+    color: red;
+    transform: translateY(6px);
+}
+
+.input-container.error > input {
+    padding-right: 210px;
+    border: 1px solid red;
+}

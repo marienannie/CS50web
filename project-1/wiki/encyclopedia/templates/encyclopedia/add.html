@@ -8,9 +8,12 @@
 
 <form method="post">
     {% csrf_token %}
-    <input type="text" name="title" placeholder="Title">
+    <div class="input-container {% if error %} error {% endif %}">
+        <input type="text" name="title" placeholder="Title" value="{{title_input|default:''}}">
+        <span> {{ error }}</span>
+    </div>
     <button type="submit">Publish</button>
-    <textarea name="content" id="content" placeholder="Write the entry content here using markdown language"></textarea>
+    <textarea name="content" id="content" placeholder="Write the entry content here using markdown language">{{content_input|default:''}}</textarea>
 </form>
 
 {% endblock %}
