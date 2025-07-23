@@ -10,6 +10,15 @@ def index(request):
     })
 
 def add(request):
+    if (request.method == "POST"):
+        title = request.POST["title"]
+        content = request.POST["content"]
+
+        full_content = f"# {title}\n\n{content}"
+
+        util.save_entry(title, full_content)
+
+        return redirect("entry", title=title)
     return render(request, "encyclopedia/add.html")
 
 def entry(request, title):
