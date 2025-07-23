@@ -169,3 +169,7 @@ hr {
 .error-container > p > a:hover{
     text-decoration: underline;
 }
+
+h1 > span {
+    color:rgb(124, 0, 207);
+}

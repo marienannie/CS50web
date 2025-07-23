@@ -42,3 +42,15 @@ def random_page(request):
 
 def error(request):
     return render(request, "encyclopedia/error.html")
+
+def search(request):
+    query = request.GET.get("q", "").strip()
+    all_entries = util.list_entries()
+
+    for entry in all_entries:
+        if query.lower() == entry.lower():
+            return redirect("entry", title=entry)
+
+    results = [entry for entry in all_entries if query.lower() in entry.lower()]
+
+    return render(request, "encyclopedia/results.html", {"query":query, "results": results})
