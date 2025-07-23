@@ -24,9 +24,7 @@ def add(request):
 def entry(request, title):
     raw_markdown = util.get_entry(title)
     if raw_markdown is None:
-        return render(request, "encyclopedia/error.html", {
-            "message": f'The "{title}" entry does not exist.'
-        })
+        return redirect('error')
     
     lines = raw_markdown.split('\n', 1)
     content_body = lines[1] if len(lines) > 1 else ''
@@ -41,3 +39,6 @@ def random_page(request):
     entries = util.list_entries()
     random_entry = random.choice(entries)
     return redirect('entry', title=random_entry)
+
+def error(request):
+    return render(request, "encyclopedia/error.html")

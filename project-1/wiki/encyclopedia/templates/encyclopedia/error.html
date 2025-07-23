@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block body %}
+
+<div class="error-container">
+   <H1>Opps! Error 404</H1>
+   <p>The page you're looking for doesn't exist</p> 
+   <p>Please check the URL or return to the <a href="{% url 'index' %}">Home Page</a></p>
+</div>
+
+{% endblock %}
