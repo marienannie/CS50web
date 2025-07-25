@@ -119,7 +119,6 @@ button:focus {
     transform: translateY(1px);
 }
 
-
 hr {
     border: none;
     height: 2px;
@@ -131,7 +130,7 @@ hr {
     padding: 0 15px;
 }
 
-.main > form {
+.create-form {
     display: grid;
     grid-template-columns: auto 150px;
     grid-template-rows: auto 1fr;
@@ -196,4 +195,43 @@ h1 > span {
 .input-container.error > input {
     padding-right: 210px;
     border: 1px solid red;
+}
+
+/* BOTON DE EDITAR */
+
+.edit-button {
+    position: fixed;
+    display: block;
+    width: 100px;
+    right: 25px;
+    bottom: 25px;
+}
+
+/* BOTON DE BORRAR */
+
+.delete-button {
+    border: 1px solid rgb(163, 0, 0);
+    background-color: rgb(255, 20, 60);
+}
+
+.edit-form {
+    display: grid;
+    grid-template-columns: auto 125px 125px;
+    grid-template-rows: auto 1fr;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.edit-form > textarea {
+    grid-column: span 3;
+}
+
+.delete-button:hover {
+    box-shadow: 1px 1px rgb(153, 0, 0);
+}
+
+.delete-button:focus {
+    outline: none;
+    transform: translateX(2px);
+    transform: translateY(1px);
 }
